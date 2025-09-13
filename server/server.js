@@ -16,17 +16,12 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.use(cors({
-  origin: true,
+  origin: [
+    "https://password-reset-seven.vercel.app"
+  ],
+  methods: ["GET", "POST"],
   credentials: true
-}));
-
-// app.use(cors({
-//   origin: [
-//     "https://password-reset-seven.vercel.app"
-//   ],
-//   methods: ["GET", "POST","PUT"],
-//   credentials: true
-// }))
+}))
 
 app.get('/', (req, res) => {
   return res.status(200).json({success: true, message: "Backend running"})
