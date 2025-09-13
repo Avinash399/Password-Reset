@@ -17,7 +17,6 @@ app.use(cookieParser())
 
 app.use(cors({
   origin: [
-    "http://localhost:5173",
     "https://password-reset-seven.vercel.app"
   ],
   methods: ["GET", "POST","PUT"],
