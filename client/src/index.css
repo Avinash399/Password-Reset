@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@100..900&family=Poppins:wght@500&display=swap');
+
+*{
+  font-family: "Outfit", sans-serif;
+}
+
+.bounce-in {
+  animation: bounce-in 1.5s ease-in-out forwards;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.welcome {
+  animation: welcome 1.8s ease-in-out forwards;
+}
+
+@keyframes welcome {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+    animation-delay: 1s;
+  }
+  /* 100% {
+    transform: scale(1);
+    opacity: 1;
+  } */
+}
+
+.hand {
+  animation: hand-wave 1s ease-in-out infinite;
+  transform-origin: bottom center; /* pivot from bottom */
+}
+
+@keyframes hand-wave {
+  0% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-15deg);
+  }
+}
